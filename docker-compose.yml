@@ -1,0 +1,27 @@
+version: '2'
+services:
+  rosplan:
+    image: thbarkouki/ur5e:base
+    # command: /bin/bash -c "source /opt/ros/melodic/setup.bash && source devel/setup.bash"
+    stdin_open: true
+    tty: true
+    environment:
+      - DISPLAY=novnc:0.0
+    depends_on:
+      - novnc
+    networks:
+      - x11
+  novnc:
+    image: theasp/novnc:latest
+    environment:
+      # Adjust to your screen size
+      - DISPLAY_WIDTH=1920
+      - DISPLAY_HEIGHT=958
+      - RUN_XTERM=no
+    ports:
+      - "8080:8080"
+    networks:
+      - x11
+networks:
+  x11:
+        # http://localhost:8080/vnc_auto.html
