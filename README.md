@@ -11,7 +11,7 @@ The only dependencies are Docker and docker-compose. The image is on Dockerhub a
 - run `docker-compose up`.
 - Navigate to <http://localhost:8080/vnc_auto.html> in your browser.
 
-### Start ROS, Gazeob, and Rviz/MoveIt to Simulate the UR5e:
+### Start ROS, Gazebo, and Rviz/MoveIt to Simulate the UR5e:
 - `roslaunch ur_gazebo ur5e_bringup.launch`
 - `roslaunch ur5e_moveit_config ur5e_moveit_planning_execution.launch sim:=true`
 - `roslaunch ur5e_moveit_config moveit_rviz.launch rviz_config:=/catkin_ws/src/fmauch_universal_robot/ur5e_moveit_config/launch/moveit.rviz`
