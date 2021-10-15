@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   ros_ur5e_driver:
-    image: thbarkouki/ur5e:${TAG}
+    image: thbarkouki/ur5e:base
     # command: /bin/bash -c "source /opt/ros/melodic/setup.bash && source devel/setup.bash"
     stdin_open: true
     tty: true
