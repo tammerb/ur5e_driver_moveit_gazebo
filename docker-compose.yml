@@ -1,7 +1,7 @@
-version: '2'
+version: '3.7'
 services:
-  rosplan:
-    image: thbarkouki/ur5e:base
+  ros_ur5e_driver:
+    image: thbarkouki/ur5e:${TAG}
     # command: /bin/bash -c "source /opt/ros/melodic/setup.bash && source devel/setup.bash"
     stdin_open: true
     tty: true
@@ -20,8 +20,5 @@ services:
       - RUN_XTERM=no
     ports:
       - "8080:8080"
-    networks:
-      - x11
 networks:
-  x11:
-        # http://localhost:8080/vnc_auto.html
+  x11: # http://localhost:8080/vnc_auto.html
