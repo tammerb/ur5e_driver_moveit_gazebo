@@ -23,6 +23,7 @@ RUN source /opt/ros/$ROS_DISTRO/setup.bash \
 # permanently setup environment
 RUN echo -e "source /opt/ros/$ROS_DISTRO/setup.bash\nsource devel/setup.bash" > /root/.bashrc
 
+# copy the calibration file into the container
 COPY ur5e.rviz /catkin_ws/src/fmauch_universal_robot/ur5e_moveit_config
 
 # Open three shells and run launch the following, in order for a SIM environment
